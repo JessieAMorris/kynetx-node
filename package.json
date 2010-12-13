@@ -1,0 +1,19 @@
+{
+  "name": "kns",
+  "description": "A module to raise events to KNS.",
+  "version": "1.0.3",
+  "homepage": "https://github.com/JessieAMorris/kynetx-node",
+  "author": "Jessie A. Morris <jam@kynetx.com> (http://www.jessieamorris.com/)",
+  "main":"./kns-events",
+  "directories": {
+    "lib": "lib/"
+  },
+  "scripts": {
+    "test": "nodeunit test-kns-events.js"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+  }
+}

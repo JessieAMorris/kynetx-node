@@ -5,7 +5,8 @@
   Below is an example application using Kynetx to raise events and respond to a directive:
 
   <code>
-    var kns = require('kns');
+    var kns = require('kns');<br />
+  </code>
 
     var appid = new kns('appid');
 

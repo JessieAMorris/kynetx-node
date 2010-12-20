@@ -32,12 +32,34 @@
 
 <h3>The KNS object</h3>
 <p>
-  The kns object (see Creating a KNS object) has three functions which can be called and emits one event.<br />
-  <h4>signal(eventname, options)</h4><br />
+  The kns object (see Creating a KNS object) has four functions which can be called and emits events.<br />
+  <h4>signal(eventname, options)</h4>
   Signals an event of "eventname" to "eventdomail" as specified in the KNS object (defaults to "node") with options as event parameters. For example:<br />
   <code>
     var appid = new kns('a41x00');<br />
     appid.signal("test", {"testparam":"foo"});
   </code><br />
-  would select on <code>select when node test testparam ".*(.)" setting(testparam)</code> capturing "o" as testparam.<br />
+  would be selected with the select statement <code>select when node test testparam ".*(.)" setting(testparam)</code> and capturing "o" as testparam.<br />
+  This function does not return anything<br /><br />
+
+  <h4>on(eventname, callback)</h4>
+    Calls the callback function with the directives paramaters when a directive with the name of eventname is returned from KNS (see Events for more info);
+  
+  <h4>appid(newappid)</h4>
+    Accepts one optional parameter. If newappid is defined, the appid of the object is changed.<br />
+    Returns the appid of the object.<br /><br />
+
+  <h4>appversion(newversion)</h4>
+    Accepts one optional parameter. If newversion is defined, the app version of the object is changed.<br />
+    Return the app version of the object<br /><br />
+</p>
+
+<p>
+  <h2>Events</h2>
+   Events which are emmited by the KNS module are of the same name as the directive returned by KNS. For example, if the action "send_directive" was called like<br /><code>send_directive("say") with text = "hello world!";</code>,<br />the event emmited by the module would be say. In order to respond to this event, one would call the "on" method of the kns object: <br />
+  <code>
+    appid.on("say", function(eventargs){
+      &nbsp;&nbsp;console.log(eventargs.text);
+    });
+  </code>
 </p>

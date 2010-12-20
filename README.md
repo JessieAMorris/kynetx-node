@@ -10,7 +10,7 @@
     var appid = new kns('appid');<br /><br />
 
     appid.on("helloworld",function(responseParams){<br />
-      console.log(responseParams['text']; // Should equal hello world. These are set via the with's on the send_directive action.<br />
+&nbsp;&nbsp;      console.log(responseParams['text']; // Should equal hello world. These are set via the with's on the send_directive action.<br />
     });<br /><br />
 
     appid.signal("anyonethere", {"eventargument":"yes"});

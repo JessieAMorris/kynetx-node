@@ -58,8 +58,8 @@
   <h2>Events</h2>
    Events which are emmited by the KNS module are of the same name as the directive returned by KNS. For example, if the action "send_directive" was called like<br /><code>send_directive("say") with text = "hello world!";</code>,<br />the event emmited by the module would be say. In order to respond to this event, one would call the "on" method of the kns object: <br />
   <code>
-    appid.on("say", function(eventargs){
-      &nbsp;&nbsp;console.log(eventargs.text);
+    appid.on("say", function(eventargs){<br />
+      &nbsp;&nbsp;console.log(eventargs.text);<br />
     });
   </code>
 </p>

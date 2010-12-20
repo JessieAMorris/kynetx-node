@@ -6,7 +6,6 @@
 
   <code>
     var kns = require('kns');<br />
-  </code>
 
     var appid = new kns('appid');
 

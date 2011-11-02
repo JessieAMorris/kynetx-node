@@ -29,7 +29,7 @@ KNS.prototype.signal = function(eventname, context) {
 
 	//version handling
 	if(self._appversion != "production"){
-		context[''+this._appid+':kynetx_app_version'] = self._appversion;
+		context[''+this._appid+':kinetic_app_version'] = self._appversion;
 	}
 
   if(opts.logging){

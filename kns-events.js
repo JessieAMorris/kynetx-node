@@ -1,5 +1,5 @@
 var events = require("events"),
-	sys = require('sys'),
+	sys = require('util'),
 	async = require('async'),
   http = require('./lib/httpclient');
 
